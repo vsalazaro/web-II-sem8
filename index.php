@@ -13,11 +13,11 @@
         #notifications-container {
             margin-top: 25px;
             text-align: center;
-            color: rgb(255, 0, 0);
+            color: rgb(254, 0, 0);
             font-weight: bold;
         }
         .destino {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             border: 1px solid #ccc;
             padding: 10px;
         }
