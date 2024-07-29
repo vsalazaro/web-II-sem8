@@ -24,4 +24,4 @@ if (!isset($_SESSION['carrito']) || empty($_SESSION['carrito'])) {
 // Puedes incluir botones adicionales como "Continuar Comprando" o "Procesar Pago"
 ?>
 
-<a href="index.php">Continuar Comprando</a> | <a href="procesar_pago.php">Procesar Pago</a>
+<a href="index.php">Seguir comprando en la pagina</a> | <a href="procesar_pago.php">Procesar Pago</a>
