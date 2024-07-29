@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Hoteles</title>
+    <script>
+        // Validación básica con JavaScript
+        function validarFormulario() {
+            let nombreHotel = document.getElementById('nombreHotel').value.trim();
+            let ubicacion = document.getElementById('ubicacion').value.trim();
+            let habitacionesDisponibles = document.getElementById('habitaciones_disponibles').value.trim();
+            let tarifaNoche = document.getElementById('tarifa_noche').value.trim();
+
+            if (nombreHotel === '' || ubicacion === '' || habitacionesDisponibles === '' || tarifaNoche === '') {
+                alert('Por favor, complete todos los campos.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Registro de Hoteles</h2>
+<form action="procesar_hotel.php" method="POST" onsubmit="return validarFormulario()">
+    <label for="nombreHotel">Nombre del Hotel:</label><br>
+    <input type="text" id="nombreHotel" name="nombreHotel" required><br>
+
+    <label for="ubicacion">Ubicación:</label><br>
+    <input type="text" id="ubicacion" name="ubicacion" required><br>
+
+    <label for="habitaciones_disponibles">Habitaciones Disponibles:</label><br>
+    <input type="number" id="habitaciones_disponibles" name="habitaciones_disponibles" required><br>
+
+    <label for="tarifa_noche">Tarifa por Noche:</label><br>
+    <input type="number" step="0.01" id="tarifa_noche" name="tarifa_noche" required><br><br>
+
+    <input type="submit" value="Registrar Hotel">
+</form>
+
+</body>
+</html>

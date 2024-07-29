@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vuelos</title>
+    <script>
+        // Validación básica con JavaScript
+        function validarFormulario() {
+            let origen = document.getElementById('origen').value.trim();
+            let destino = document.getElementById('destino').value.trim();
+            let fecha = document.getElementById('fecha').value.trim();
+            let plazasDisponibles = document.getElementById('plazas_disponibles').value.trim();
+            let precio = document.getElementById('precio').value.trim();
+
+            if (origen === '' || destino === '' || fecha === '' || plazasDisponibles === '' || precio === '') {
+                alert('Por favor, complete todos los campos.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Registro de Vuelos</h2>
+<form action="procesar_vuelo.php" method="POST" onsubmit="return validarFormulario()">
+    <label for="origen">Origen:</label><br>
+    <input type="text" id="origen" name="origen" required><br>
+
+    <label for="destino">Destino:</label><br>
+    <input type="text" id="destino" name="destino" required><br>
+
+    <label for="fecha">Fecha:</label><br>
+    <input type="date" id="fecha" name="fecha" required><br>
+
+    <label for="plazas_disponibles">Plazas Disponibles:</label><br>
+    <input type="number" id="plazas_disponibles" name="plazas_disponibles" required><br>
+
+    <label for="precio">Precio:</label><br>
+    <input type="number" step="0.01" id="precio" name="precio" required><br><br>
+
+    <input type="submit" value="Registrar Vuelo">
+</form>
+
+</body>
+</html>
