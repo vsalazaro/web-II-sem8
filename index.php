@@ -11,7 +11,7 @@
             margin-top: 20px;
         }
         #notifications-container {
-            margin-top: 20px;
+            margin-top: 25px;
             text-align: center;
             color: rgb(255, 0, 0);
             font-weight: bold;
